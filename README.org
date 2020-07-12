@@ -1,0 +1,19 @@
+* armv8-rpi3-linux-gnueabihf for Mac OS
+
+A cross-compiler toolchain for macOS (10.15) host built with crosstool-NG.
+
+** Built with
+   - binutils-2.32
+   - expat-2.2.6
+   - gcc-8.3.0
+   - gdb-8.2.1
+   - gettext-0.19.8.1
+   - glibc-2.29
+   - gmp-6.1.2
+   - isl-0.20
+   - libiconv-1.15
+   - linux-4.20.8
+   - mpc-1.1.0
+   - mpfr-4.0.2
+   - ncurses-6.1
+   - zlib-1.2.11
