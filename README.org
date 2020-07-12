@@ -17,3 +17,21 @@ A cross-compiler toolchain for macOS (10.15) host built with crosstool-NG.
    - mpfr-4.0.2
    - ncurses-6.1
    - zlib-1.2.11
+
+** Troubleshooting
+
+*** elf.h file not found
+    It is hard to get the header working with Mac OS to build
+    kernel. For me, the file from this
+    link(https://www.rockbox.org/tracker/task/9006) works
+    well. (Direct link from the link:
+    https://www.rockbox.org/tracker/task/9006?getfile=16683)
+
+*** Error on SSL libraries
+    To build kernel properly, we need to set proper INCLUDE paths by
+    adding a path where openssl has been installed.
+
+    #+BEGIN_SRC bash
+    KERNEL=kernel7 ARCH=arm CROSS_COMPILE=armv8-rpi3-linux-gnueabihf-
+    HOSTCFLAGS="-I/usr/local/include -I/usr/local/opt/openssl@1.1/include -L/usr/local/opt/openssl/lib"  make
+    #+END_SRC
